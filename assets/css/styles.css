@@ -1,6 +1,6 @@
 :root {
-  --color-teal: #0a8d91;
-  --color-teal-soft: #0fb0b6;
+  --color-teal: #014552;
+  --color-teal-soft: #026172;
   --color-charcoal: #1e272e;
   --color-gold-soft: #f3e3b2;
   --color-bg: #f5fbfb;
@@ -79,7 +79,7 @@ p {
   z-index: 20;
   background: rgba(245, 251, 251, 0.96);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(10, 141, 145, 0.06);
+  border-bottom: 1px solid rgba(1, 69, 82, 0.12);
 }
 
 .header-inner {
@@ -97,11 +97,17 @@ p {
   gap: 0.6rem;
 }
 
+.logo-image {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .logo-mark {
   width: 38px;
   height: 38px;
   border-radius: 14px;
-  background: radial-gradient(circle at 30% 20%, #12c2c9, #0a8d91);
+  background: radial-gradient(circle at 30% 20%, #026172, #014552);
   color: var(--color-white);
   display: inline-flex;
   align-items: center;
@@ -175,30 +181,30 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0fb0b6, #0a8d91);
+  background: linear-gradient(135deg, #026172, #014552);
   color: var(--color-white);
   box-shadow: var(--shadow-soft);
 }
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 22px 50px rgba(10, 141, 145, 0.25);
+  box-shadow: 0 22px 50px rgba(1, 69, 82, 0.3);
 }
 
 .btn-outline {
-  background: rgba(10, 141, 145, 0.04);
+  background: rgba(1, 69, 82, 0.06);
   color: var(--color-teal);
-  border: 1px solid rgba(10, 141, 145, 0.2);
+  border: 1px solid rgba(1, 69, 82, 0.25);
 }
 
 .btn-outline:hover {
-  background: rgba(10, 141, 145, 0.12);
+  background: rgba(1, 69, 82, 0.12);
 }
 
 .btn-secondary {
   background: var(--color-white);
   color: var(--color-teal);
-  border: 1px solid rgba(10, 141, 145, 0.25);
+  border: 1px solid rgba(1, 69, 82, 0.3);
 }
 
 .btn-secondary:hover {
@@ -268,7 +274,7 @@ p {
 
 .pill {
   border-radius: var(--radius-pill);
-  background: rgba(10, 141, 145, 0.08);
+  background: rgba(1, 69, 82, 0.1);
   padding: 0.3rem 0.9rem;
   font-size: 0.8rem;
   font-weight: 600;
@@ -341,6 +347,16 @@ p {
   margin-top: 0.5rem;
 }
 
+.link-ghost {
+  font-size: 0.9rem;
+  color: var(--color-teal);
+  text-decoration: none;
+}
+
+.link-ghost:hover {
+  text-decoration: underline;
+}
+
 /* Sections */
 .section-light {
   padding: 2.75rem 0 3.25rem;
@@ -348,7 +364,7 @@ p {
 
 .section-dark {
   padding: 3.25rem 0;
-  background: radial-gradient(circle at top left, #0fb0b6 0, #0a8d91 32%, #081b1d 100%);
+  background: radial-gradient(circle at top left, #026172 0, #014552 32%, #081b1d 100%);
   color: var(--color-white);
 }
 
@@ -441,10 +457,19 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+/* Who We Serve: 3 columns top row, 2 columns bottom row (centered) */
 .serve-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+.serve-grid .serve-card:nth-child(4) {
+  grid-column: 1;
+}
+
+.serve-grid .serve-card:nth-child(5) {
+  grid-column: 2;
 }
 
 .serve-card {
@@ -468,13 +493,17 @@ p {
 .service-card {
   background: var(--color-white);
   border-radius: var(--radius-lg);
-  padding: 1.4rem 1.35rem 1.3rem;
+  padding: 1.6rem 1.5rem 1.4rem;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .service-card h2,
 .service-card h3 {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  color: var(--color-charcoal);
 }
 
 .service-tagline {
@@ -484,7 +513,7 @@ p {
 }
 
 .service-card p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--color-muted);
 }
 
@@ -649,7 +678,7 @@ label {
 input,
 textarea {
   border-radius: 10px;
-  border: 1px solid rgba(10, 141, 145, 0.25);
+  border: 1px solid rgba(1, 69, 82, 0.3);
   padding: 0.6rem 0.7rem;
   font-size: 0.9rem;
   font-family: inherit;
@@ -660,7 +689,7 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: var(--color-teal);
-  box-shadow: 0 0 0 1px rgba(10, 141, 145, 0.2);
+  box-shadow: 0 0 0 1px rgba(1, 69, 82, 0.2);
 }
 
 textarea {
@@ -766,8 +795,14 @@ textarea {
   .two-col,
   .split,
   .page-hero-inner,
-  .contact-layout {
+  .contact-layout,
+  .serve-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .serve-grid .serve-card:nth-child(4),
+  .serve-grid .serve-card:nth-child(5) {
+    grid-column: auto;
   }
 
   .hero {

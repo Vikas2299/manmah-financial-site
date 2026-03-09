@@ -15,7 +15,7 @@
     <div class="container header-inner">
       <div class="logo">
         <a href="index.html">
-          <span class="logo-mark">M</span>
+          <img src="assets/images/IMG-20260308-WA0000-removebg-preview.png" alt="Manmah Financial logo" class="logo-image" />
           <span class="logo-text">Manmah Financial</span>
         </a>
       </div>
@@ -61,17 +61,16 @@
               <p><a href="mailto:Sunitam@manmah.com">Sunitam@manmah.com</a></p>
             </div>
           </div>
-          <a href="contact.html#form" class="btn btn-primary">Book a Complimentary Consultation</a>
         </div>
 
         <div class="contact-form-wrapper" id="form">
           <h2>Book a Complimentary Consultation</h2>
-          <p class="form-intro">
-            Use the form below to send a message, or embed your GoDaddy form or Calendly link where noted.
-          </p>
 
-          <!-- Replace this area with your GoDaddy form or Calendly embed -->
-          <form class="simple-form" action="#" method="post">
+          <form name="contact" class="simple-form" method="post" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden" style="display:none">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
             <div class="form-row">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Your full name" required />
@@ -90,7 +89,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Book Complimentary Consultation</button>
           </form>
-          <p class="form-note">You can replace this form with your GoDaddy form or Calendly widget embed code.</p>
         </div>
       </div>
     </section>
