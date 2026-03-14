@@ -775,9 +775,9 @@ textarea {
 }
 
 .contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   margin-top: 1rem;
   font-size: 0.9rem;
 }
@@ -787,11 +787,35 @@ textarea {
   margin-bottom: 0.15rem;
 }
 
+.contact-whatsapp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-qr-caption {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.contact-qr-image {
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
 .contact-form-wrapper {
   background: var(--color-white);
   border-radius: 24px;
   padding: 1.6rem 1.5rem 1.4rem;
   box-shadow: var(--shadow-soft);
+}
+
+.contact-calendly-cta p {
+  margin-bottom: 1.25rem;
+  color: var(--color-muted);
 }
 
 /* Footer */
@@ -896,8 +920,5 @@ textarea {
     align-items: flex-start;
   }
 
-  .contact-info {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
 
