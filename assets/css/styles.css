@@ -98,7 +98,7 @@ p {
 }
 
 .logo-image {
-  height: 40px;
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -646,6 +646,43 @@ p {
   border-radius: var(--radius-lg);
   padding: 1.3rem 1.3rem 1.1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* About page: consistent profile layout (text left, image right) for both people */
+.about-profile-block {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 320px);
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-profile-content h2 {
+  margin-top: 0;
+}
+
+.about-profile-image-wrap {
+  /* images are static (no sticky) */
+}
+
+.about-profile-image-wrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .about-profile-block {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-profile-image-wrap {
+    position: static;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
 
 .narrow {
