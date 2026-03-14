@@ -6,6 +6,36 @@
   <title>Manmah Financial | Strategic Financial Planning</title>
   <meta name="description" content="Strategic financial planning for protection, growth, and retirement confidence. Helping individuals, families, and business owners build financial security." />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    /* Home page service cards: titles at top, equal height, vertically aligned */
+    .home-service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+    @media (max-width: 900px) {
+      .home-service-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .home-service-grid { grid-template-columns: 1fr; }
+    }
+    .home-service-card {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      align-content: start;
+      justify-content: flex-start;
+      height: 100%;
+      min-height: 0;
+    }
+    .home-service-card h3 {
+      margin: 0 0 0.5rem;
+      min-height: 2.6em;
+    }
+    .home-service-card p {
+      margin: 0;
+    }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -77,7 +107,7 @@
     </section>
 
     <!-- Services Preview -->
-    <section class="section-dark">
+    <section class="section-dark home-services">
       <div class="container">
         <header class="section-header">
           <h2>Helping You Plan, Grow &amp; Protect Your Money</h2>
@@ -86,20 +116,20 @@
             and protect your future—no matter where you are in life.
           </p>
         </header>
-        <div class="service-grid">
-          <article class="service-card">
+        <div class="service-grid home-service-grid">
+          <article class="service-card home-service-card">
             <h3>Long-Term Financial Planning</h3>
             <p>Clear guidance to help you make confident financial decisions for every stage of life.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card home-service-card">
             <h3>Tax-Smart Wealth Strategies</h3>
             <p>Keep more of what you earn with smart, tax-efficient planning.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card home-service-card">
             <h3>Retirement &amp; Lifetime Income</h3>
             <p>Create steady income you can rely on throughout retirement.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card home-service-card">
             <h3>Health &amp; Insurance Solutions</h3>
             <p>Medicare, visitor insurance, and group health plans to protect you, your family, and your business.</p>
           </article>
